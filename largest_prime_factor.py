@@ -16,7 +16,7 @@ def sieve(limit: int) -> list[int]:
                 primes[j] = False
         i += 1
 
-    return list(i for i in range(2, limit) if primes[i])
+    return list(i for i in range(2, limit+1) if primes[i])
 
 def main() -> int:
     primes = sieve(limit=int(math.sqrt(600_851_475_143)))
