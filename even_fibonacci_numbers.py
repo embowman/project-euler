@@ -18,7 +18,7 @@ def fib(memo: dict, n: int) -> int:
 
 def main() -> int:
     memo = dict()
-    store = [fib(memo=memo, n=n) for n in range(34)]
+    store = list(fib(memo=memo, n=n) for n in range(34))
 
     return sum(i for i in store if i % 2 == 0)
 
