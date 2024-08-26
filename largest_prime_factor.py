@@ -4,9 +4,6 @@
 # Answer: 6857
 
 
-import math
-
-
 def sieve(limit: int) -> list[int]:
     primes = list(True for _ in range(limit+1))
     i = 2
@@ -19,7 +16,7 @@ def sieve(limit: int) -> list[int]:
     return list(i for i in range(2, limit+1) if primes[i])
 
 def main() -> int:
-    primes = sieve(limit=int(math.sqrt(600_851_475_143)))
+    primes = sieve(limit=int(600_851_475_143**0.5))
     factors = list(p for p in primes if 600_851_475_143 % p == 0)
 
     return factors[-1]
